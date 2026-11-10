@@ -4,9 +4,12 @@ import "@fontsource-variable/open-sans";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dynace-cameroun.com"),
-  title: "Dynace Cameroun | Produits Botaniques & Bien-être Livrés à Domicile",
+  metadataBase: new URL("https://dynaceglobal.vercel.app"),
+  title: "Dynace Global Santé Cameroun | Produits Botaniques & Bien-être Livrés à Domicile",
   description: "Distributeur indépendant agréé des produits Dynace Global au Cameroun (Rocenta, Ace Brew Coffee, Collagène, Aceguard). Commande rapide sur WhatsApp & livraison express.",
+  verification: {
+    google: "7z7QeS6oxV3E0P0GGbb-nw9AGFPi-Vr1QYASE9jSmnY",
+  },
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Partenaire Indépendant Dynace Cameroun" }],
   openGraph: {
-    title: "Dynace Cameroun | Boutique & Commande WhatsApp",
+    title: "Dynace Global Santé Cameroun | Boutique & Commande WhatsApp",
     description: "Commandez vos produits Dynace originaux en 1 clic sur WhatsApp. Livraison à Yaoundé et dans tout le Cameroun.",
     type: "website",
     locale: "fr_FR",
@@ -56,11 +59,11 @@ const localBusinessSchema = {
   "@type": "HealthAndBeautyBusiness",
   name: "Dynace Cameroun",
   description: "Distributeur indépendant agréé des produits botaniques et de biothérapie cellulaire Dynace Global au Cameroun (Dynace Rocenta, Ace Brew Coffee, Collagène, Aceguard).",
-  url: "https://dynace-cameroun.com",
+  url: "https://dynaceglobal.vercel.app",
   telephone: "+237674664829",
   priceRange: "FCFA",
-  image: "https://dynace-cameroun.com/img/rocenta.webp",
-  logo: "https://dynace-cameroun.com/icon.svg",
+  image: "https://dynaceglobal.vercel.app/img/rocenta.webp",
+  logo: "https://dynaceglobal.vercel.app/icon.svg",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Yaoundé",
@@ -144,6 +147,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr">
       <head>
+        <meta name="google-site-verification" content="7z7QeS6oxV3E0P0GGbb-nw9AGFPi-Vr1QYASE9jSmnY" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
